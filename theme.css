@@ -1,0 +1,63 @@
+/* E Ink Reader 1.0.0. MIT. */
+
+body.theme-light {
+  --background-primary: #ffffff;
+  --background-primary-alt: #ffffff;
+  --background-secondary: #ffffff;
+  --background-secondary-alt: #ffffff;
+  --background-modifier-form-field: #ffffff;
+  --background-modifier-border: #666666;
+  --background-modifier-border-hover: #666666;
+  --background-modifier-border-focus: #161616;
+  --background-modifier-hover: color-mix(in srgb, #161616 12%, #ffffff);
+  --background-modifier-active-hover: color-mix(in srgb, #161616 18%, #ffffff);
+  --text-normal: #101010;
+  --text-muted: #303030;
+  --text-faint: #303030;
+  --text-accent: #161616;
+  --text-accent-hover: #303030;
+  --text-on-accent: #ffffff;
+  --interactive-accent: #161616;
+  --interactive-accent-hover: #303030;
+  --text-selection: color-mix(in srgb, #161616 25%, #ffffff);
+  --text-highlight-bg: color-mix(in srgb, #242424 23%, #ffffff);
+  --color-blue: #161616;
+  --color-orange: #242424;
+  --color-green: #101010;
+  --color-purple: #303030;
+  --code-background: #ffffff;
+  --code-normal: #101010;
+  --code-comment: #303030;
+  --code-function: #161616;
+  --code-keyword: #303030;
+  --code-string: #101010;
+  --link-color: #161616;
+  --link-external-color: #101010;
+  --icon-color: #303030;
+  --nav-item-color: #303030;
+  --nav-item-color-active: #101010;
+  --tab-text-color: #303030;
+}
+
+body.theme-light { --caret-color: #000; --text-selection: #d2d2d2; --text-highlight-bg: #dedede; }
+body.theme-light *, body.theme-light *::before, body.theme-light *::after {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+  scroll-behavior: auto !important;
+  box-shadow: none !important;
+}
+body.theme-light .cm-cursor { animation: none !important; visibility: visible !important; }
+body.theme-light :is(.menu, .modal, .callout, .nav-file-title.is-active) { outline: 1px solid #333; outline-offset: -1px; }
+body.theme-light .markdown-rendered a { text-decoration: underline; }
+
+.workspace-leaf-content :focus-visible,
+.modal :focus-visible,
+.menu :focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: -2px;
+}
+
+.markdown-rendered .list-bullet::after,
+.markdown-source-view .list-bullet::after {
+  background-color: var(--text-muted);
+}
