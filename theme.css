@@ -1,4 +1,4 @@
-/* E Ink Reader 1.0.0. MIT. */
+/* E Ink Reader 1.0.1. MIT. */
 
 body.theme-light {
   --background-primary: #ffffff;
@@ -49,6 +49,10 @@ body.theme-light *, body.theme-light *::before, body.theme-light *::after {
 body.theme-light .cm-cursor { animation: none !important; visibility: visible !important; }
 body.theme-light :is(.menu, .modal, .callout, .nav-file-title.is-active) { outline: 1px solid #333; outline-offset: -1px; }
 body.theme-light .markdown-rendered a { text-decoration: underline; }
+
+.markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
+  padding-inline: 8px;
+}
 
 .workspace-leaf-content :focus-visible,
 .modal :focus-visible,
