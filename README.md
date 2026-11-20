@@ -2,7 +2,7 @@
 
 A practical monochrome Obsidian theme for actual e-ink devices.
 
-Source version 1.0.1. Modes supported: Light. Tested in Obsidian 1.15.1 on Windows.
+Source version 3.2.0. Modes supported: Light. Tested in Obsidian 1.15.1 on Windows.
 
 The theme uses monochrome colours and removes theme transitions. Display ghosting and cursor behaviour have not been verified on physical e-ink hardware.
 
