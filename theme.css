@@ -1,4 +1,4 @@
-/* E Ink Reader 3.2.0. MIT. */
+/* E Ink Reader. MIT. */
 
 body.theme-light {
   --background-primary: #ffffff;
@@ -19,8 +19,9 @@ body.theme-light {
   --text-on-accent: #ffffff;
   --interactive-accent: #161616;
   --interactive-accent-hover: #303030;
-  --text-selection: color-mix(in srgb, #161616 25%, #ffffff);
-  --text-highlight-bg: color-mix(in srgb, #242424 23%, #ffffff);
+  --caret-color: #000;
+  --text-selection: #d2d2d2;
+  --text-highlight-bg: #dedede;
   --color-blue: #161616;
   --color-orange: #242424;
   --color-green: #101010;
@@ -39,29 +40,30 @@ body.theme-light {
   --tab-text-color: #303030;
 }
 
-body.theme-light { --caret-color: #000; --text-selection: #d2d2d2; --text-highlight-bg: #dedede; }
-body.theme-light *, body.theme-light *::before, body.theme-light *::after {
-  animation-duration: 0s !important;
-  transition-duration: 0s !important;
+/* CodeMirror animates the cursor layer. Let it manage cursor visibility. */
+body.theme-light,
+body.theme-light::before,
+body.theme-light::after,
+body.theme-light *,
+body.theme-light *::before,
+body.theme-light *::after {
+  animation: none !important;
+  transition: none !important;
   scroll-behavior: auto !important;
   box-shadow: none !important;
 }
-body.theme-light .cm-cursor { animation: none !important; visibility: visible !important; }
 body.theme-light :is(.menu, .modal, .callout, .nav-file-title.is-active) { outline: 1px solid #333; outline-offset: -1px; }
 body.theme-light .markdown-rendered a { text-decoration: underline; }
 
-.markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
+body.theme-light .markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
   padding-inline: 8px;
 }
 
-.workspace-leaf-content :focus-visible,
-.modal :focus-visible,
-.menu :focus-visible {
+body.theme-light :is(.workspace-leaf-content, .modal, .menu) :focus-visible {
   outline: 2px solid var(--text-accent);
   outline-offset: -2px;
 }
 
-.markdown-rendered .list-bullet::after,
-.markdown-source-view .list-bullet::after {
+body.theme-light :is(.markdown-rendered, .markdown-source-view) .list-bullet::after {
   background-color: var(--text-muted);
 }
