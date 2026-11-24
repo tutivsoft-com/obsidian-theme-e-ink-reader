@@ -25,4 +25,5 @@ python -B -m unittest discover -s tests -v
 
 The tests parse the stylesheet and check the matching styles for sample editor, reading and navigation elements.
 
+See the [desktop verification and its ten screenshots](docs/qa/2026-11-24/README.md).
 See the [original design plan](PLAN.md). [MIT license](LICENSE).

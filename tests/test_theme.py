@@ -112,6 +112,19 @@ class ThemeTests(unittest.TestCase):
                 self.styles("light", element, "after")["background-color"][0], "var(--text-muted)"
             )
 
+    def test_uses_a_monochrome_palette_for_code_status_and_canvas(self):
+        palette = self.styles("light", "app")
+        for color in ("red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink"):
+            with self.subTest(color=color):
+                rgb, _ = palette[f"--color-{color}-rgb"]
+                red, green, blue = map(int, rgb.split(","))
+                self.assertEqual(red, green)
+                self.assertEqual(green, blue)
+                self.assertLessEqual(red, 118)  # At least 4.5:1 against white.
+                self.assertEqual(palette[f"--color-{color}"][0], f"rgb(var(--color-{color}-rgb))")
+        for variable in ("--canvas-color", "--graph-line"):
+            self.assertEqual(palette[variable][0], "#666666")
+
     def test_release_files_and_manifest(self):
         manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
         self.assertEqual(manifest["name"], "E Ink Reader")

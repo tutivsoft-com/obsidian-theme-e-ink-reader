@@ -22,10 +22,22 @@ body.theme-light {
   --caret-color: #000;
   --text-selection: #d2d2d2;
   --text-highlight-bg: #dedede;
-  --color-blue: #161616;
-  --color-orange: #242424;
-  --color-green: #101010;
-  --color-purple: #303030;
+  --color-red-rgb: 64, 64, 64;
+  --color-orange-rgb: 36, 36, 36;
+  --color-yellow-rgb: 87, 87, 87;
+  --color-green-rgb: 16, 16, 16;
+  --color-cyan-rgb: 73, 73, 73;
+  --color-blue-rgb: 22, 22, 22;
+  --color-purple-rgb: 48, 48, 48;
+  --color-pink-rgb: 102, 102, 102;
+  --color-red: rgb(var(--color-red-rgb));
+  --color-orange: rgb(var(--color-orange-rgb));
+  --color-yellow: rgb(var(--color-yellow-rgb));
+  --color-green: rgb(var(--color-green-rgb));
+  --color-cyan: rgb(var(--color-cyan-rgb));
+  --color-blue: rgb(var(--color-blue-rgb));
+  --color-purple: rgb(var(--color-purple-rgb));
+  --color-pink: rgb(var(--color-pink-rgb));
   --code-background: #ffffff;
   --code-normal: #101010;
   --code-comment: #303030;
@@ -38,6 +50,8 @@ body.theme-light {
   --nav-item-color: #303030;
   --nav-item-color-active: #101010;
   --tab-text-color: #303030;
+  --canvas-color: #666666;
+  --graph-line: #666666;
 }
 
 /* CodeMirror animates the cursor layer. Let it manage cursor visibility. */
